@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informe de Obstetricia y Ginecología"
+        android:textColor="@color/grey"
+        android:paddingStart="16dp"
+        android:layout_marginTop="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="28 de mayo de 2020"
+        android:textColor="@color/skyblue"
+        android:paddingStart="16dp"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:cardBackgroundColor="@color/skyblue"
+            app:cardCornerRadius="10dp">
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="DESCARGAR"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="9dp"
+                android:paddingTop="9dp" />
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:strokeColor="@color/skyblue"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp">
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="VER DETALLE"
+                android:textStyle="bold"
+                android:textColor="@color/skyblue"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:paddingBottom="9dp"
+                android:paddingTop="9dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

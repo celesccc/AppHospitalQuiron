@@ -60,13 +60,39 @@
         android:textSize="16sp"
         android:paddingStart="16dp"
         android:gravity="center"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Actualizado hace 0 minuto(s)"
-        android:textSize="12sp"
-        android:paddingStart="16dp"
-        android:gravity="center"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:text="Actualizado hace 0 minuto(s)"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/menu_descarga"
+            android:tint="@color/skyblue"
+            app:layout_constraintStart_toEndOf="@id/textView"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="15dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/lupa"
+            android:tint="@color/skyblue"
+            app:layout_constraintStart_toEndOf="@id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -114,13 +140,24 @@
         android:textStyle="bold"
         android:padding="16dp"/>
 
-    <include layout="@layout/include"/>
-    <include layout="@layout/include"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="280dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <include layout="@layout/include"/>
+            <include layout="@layout/include"/>
+            <include layout="@layout/include"/>
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="40dp">
+        android:paddingTop="20dp">
         <include layout="@layout/include_abajo"/>
         <include layout="@layout/include_abajo"/>
         <include layout="@layout/include_abajo"/>

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,19 +14,21 @@
         android:orientation="horizontal"
         android:background="@color/grey">
         <ImageView
-            android:layout_width="100dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
             android:src="@mipmap/menu"
-            android:padding="20dp"
-            android:tint="@color/white"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:tint="@color/white" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="20dp"
+            android:layout_margin="20dp"
+            android:paddingStart="40dp"
             android:text="Pruebas e informes"
             android:textColor="@color/white"
-            android:textSize="20sp" />
+            android:textSize="20sp"/>
     </LinearLayout>
 
 
@@ -41,22 +44,23 @@
             android:text="Hospital"
             android:textSize="14sp"
             android:textStyle="bold"
+            android:textColor="@color/grey"
             android:padding="12dp"
             android:gravity="center">
         </TextView>
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Personales"
             android:textSize="14sp"
+            android:textColor="@color/grey"
             android:padding="12dp"
             android:gravity="center"/>
 
     </LinearLayout>
     <View android:background="#000"
-        android:layout_width="wrap_content"
+        android:layout_width="195dp"
         android:layout_height="4dp"
         android:backgroundTint="@color/skyblue"/>
 
@@ -65,22 +69,22 @@
         android:layout_height="wrap_content"
         android:text="Pruebas e informes"
         android:textSize="16sp"
+        android:textColor="@color/grey"
         android:paddingStart="16dp"
-        android:gravity="center"/>
+        android:paddingTop="8dp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/c1">
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="4dp"
             android:paddingStart="16dp"
             android:text="Actualizado hace 0 minuto(s)"
             android:textSize="12sp"
+            android:textColor="@color/grey"
             app:layout_constraintEnd_toStartOf="@+id/imageView3"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
@@ -92,26 +96,26 @@
             android:layout_width="40dp"
             android:layout_height="30dp"
             android:src="@mipmap/menu_descarga"
-            android:tint="@color/skyblue"
             app:layout_constraintEnd_toStartOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginRight="15dp"/>
+            android:layout_marginRight="15dp"
+            app:tint="@color/skyblue" />
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="40dp"
             android:layout_height="20dp"
             android:src="@mipmap/lupa"
-            android:tint="@color/skyblue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            app:tint="@color/skyblue" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:orientation="vertical"
@@ -123,6 +127,7 @@
             android:text="La interpretación de estas pruebas de resultados no debería
             hacerse de forma aislada, sino con la asesoría del médico responsable y valorándose en un contexto clínico global."
             android:textSize="12sp"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:padding="8dp"/>
         <com.google.android.material.card.MaterialCardView
@@ -130,14 +135,14 @@
             android:layout_height="match_parent"
             android:layout_gravity="end"
             android:layout_margin="8dp"
+            android:background="@color/white"
             app:strokeColor="@color/skyblue"
             app:strokeWidth="1dp"
-            app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp"
             app:contentPadding="2dp">
             <TextView
                 android:layout_height="match_parent"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:text="VER MÁS"
                 android:textStyle="bold"
                 android:textColor="@color/skyblue"
@@ -154,6 +159,7 @@
         android:text="31 pruebas e informes"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:textColor="@color/grey"
         android:paddingStart="16dp"/>
 
 
@@ -174,7 +180,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center">
         <include layout="@layout/include_abajo"/>
         <include layout="@layout/include_abajo"/>
         <include layout="@layout/include_abajo"/>
